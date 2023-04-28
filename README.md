@@ -1,9 +1,8 @@
 # Simple resources for Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/AchrafBardan/simple-resources-for-laravel.svg?style=flat-square)](https://packagist.org/packages/AchrafBardan/simple-resources-for-laravel)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/AchrafBardan/simple-resources.svg?style=flat-square)](https://packagist.org/packages/achrafbardan/simple-resources)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/AchrafBardan/simple-resources-for-laravel/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/AchrafBardan/simple-resources-for-laravel/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/AchrafBardan/simple-resources-for-laravel/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/AchrafBardan/simple-resources-for-laravel/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/AchrafBardan/simple-resources-for-laravel.svg?style=flat-square)](https://packagist.org/packages/AchrafBardan/simple-resources-for-laravel)
+[![Total Downloads](https://img.shields.io/packagist/dt/AchrafBardan/simple-resources.svg?style=flat-square)](https://packagist.org/packages/achrafbardan/simple-resources)
 
 This is a small package that simplifies resource usage. It is used to auto guess and link resources to models. Paginated collections are also auto wrappable in the resource.
 
