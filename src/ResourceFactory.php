@@ -2,6 +2,7 @@
 
 namespace AchrafBardan\SimpleResources;
 
+use AchrafBardan\SimpleResources\Contracts\HasResource;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Http\Resources\MissingValue;
 use Illuminate\Pagination\AbstractPaginator;
@@ -95,10 +96,16 @@ class ResourceFactory
     /**
      * Get the resource class by model name.
      *
+     * It first checks for the HasResource contract. If it exists, it will get the resource from the model.
+     *
      * @return mixed
      */
     public static function resolveResourceName(string $modelName): string
     {
+        if (class_exists($modelName) && in_array(HasResource::class, class_implements($modelName))) {
+            return (new $modelName)->getResource();
+        }
+
         if (config('simple-resources.guess_resource_name') && is_callable(static::$resourceNameResolver)) {
             $resolver = (static::$resourceNameResolver);
         }
