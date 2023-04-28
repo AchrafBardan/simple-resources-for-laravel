@@ -1,0 +1,69 @@
+{
+    "name": "achrafbardan/simple-resources",
+    "description": "This is my package simple-resources-for-laravel",
+    "keywords": [
+        "AchrafBardan",
+        "laravel",
+        "simple-resources-for-laravel"
+    ],
+    "homepage": "https://github.com/AchrafBardan/simple-resources-for-laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Achraf Bardan",
+            "email": "AchrafBardan@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "spatie/laravel-package-tools": "^1.14.0",
+        "illuminate/contracts": "^9.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AchrafBardan\\SimpleResources\\": "src/",
+            "AchrafBardan\\SimpleResources\\Database\\Factories\\": "database/factories/"
+        },
+        "files": [
+            "src/Functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AchrafBardan\\SimpleResources\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AchrafBardan\\SimpleResources\\SimpleResourcesServiceProvider"
+            ],
+            "aliases": {
+                "SimpleResources": "AchrafBardan\\SimpleResources\\Facades\\SimpleResources"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
